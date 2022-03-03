@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 사람인지 아닌지 판별할 수 있도록
+        // 여러분들이 prompt를 이용해 문제를 내주시고
+        // 정답을 적은 경우 조건문을 이용해서
+        // 브라우저 화면에 사람으로 확인되었습니다.
+        // 정답을 적지 않은 경우 로봇은 접속할 수 없습니다.
+        // 라고 띄워주시면 됩니다.
+        // prompt로 입력된 자료는 "문자열" 로 간주됩니다.
+
+        var a = prompt("사람입니까?");
+        // JS에서 자료형을 검사할때는 typeof()를 씁니다.
+        console.log(typeof(a));
+        if (a === "사람입니다.") {
+            document.write("<h1>사람으로 확인되었습니다.</h1>")
+        } else {
+            document.write("<h1>로봇은 접속할 수 없습니다.</h1>")
+        }
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
