@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var num = 0; // 그림 번호
+        // document : 문서 전체
+
+        function nextPic() {
+
+            num++; // 다음 그림 번호로 이동
+
+            // 마지막 번호까지 돌면 다시 0으로 돌아오는 장치를 추가해주세요.
+            if (num > 2) {
+                num = 0;
+            }
+
+            document.getElementById("pic").src
+                = "img/img" + num + ".jpg"; // 그림 번호 바꾸기
+
+            console.log(num);
+
+            return false; // 그림 변경만 하고 a태그 클릭으로 인한 주소 이동은 막기.
+
+        }
+
+        // prevPic()을 이용해 뒤로가기 기능도 추가해주세요.
+        function prevPic() {
+
+            num--;
+
+            if (num < 0) {
+                num = 2;
+            }
+
+            document.getElementById("pic").src
+                = "img/img" + num + ".jpg";
+            
+            console.log(num);
+
+            return false;
+
+        }
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>이미지 넘기기</h1>
+
+    <a href="#" onclick="return prevPic()">&lt;&lt;</a> <!--a태그의 특성상 주소이동을 하기 때문에 onclick 자리에 return false를 걸어 주소이동을 막는다.-->
+
+    <img width="200px" src="img/img0.jpg" id="pic">
+
+    <a href="#" onclick="return nextPic()">&gt;&gt;</a>
+
+    <script>
+        // console.log(document.getElementById("pic").src); // 전체문서.Id가 pic인 태그 내부의 src를 가지고옴
+        // id="pic" 인 태그 내부의 src속성값을 가져옴.
+    </script>
+</body>
+</html>
