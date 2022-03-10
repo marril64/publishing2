@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .h1h1 {
+            color : blue;
+        }
+    </style>
+    <script>
+        // #h1space 내부에 #createh1을 클릭할때마다
+        // h1태그(넣고싶은 단어는 아무렇게나 넣어주세요) 가 생성되는
+        // 로직을 작성해주세요.
+        window.onload = function() {
+            // 1. #h1space 변수로 저장(저장 위치)
+            // var h1space = document.getElementById("h1space");
+
+            // 2. #createh1 변수로 저장(트리거)
+            // var createh1 = document.getElementById("createh1");
+
+            // 3. #createh1 onclick 설정
+            createh1.onclick = function() {
+
+                // 4. onclick 실행 함수 내부에서 h1태그 생성
+                var newh1 = document.createElement("h1");
+                newh1.setAttribute("class", "h1h1");
+                // 5. 생성된 h1에 text 추가로 넣기
+                var text = document.createTextNode("안녕하세요!");
+                newh1.appendChild(text);
+
+                // 6. 1번의 #h1space에 생성한 h1 자식으로 넣기
+                h1space.appendChild(newh1);
+
+            }
+        } // 위 코드의 h1에 class속성을 부여해주세요. 속성값은 마음대로 부여해주세요.
+        // 그리고 <style>태그 내에 해당 클래스 속성요소의 글씨색을 파란색으로 바꿔주세요.
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="h1space">
+
+    </div>
+    <button id="createh1">h1생성</button>
+</body>
+</html>
