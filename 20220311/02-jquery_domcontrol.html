@@ -48,6 +48,35 @@
             // 6. id="list1"인 요소의 li중 3번째(2) 이전 요소만
             // 경계선 aqua, dotted, 2px 적용
             $("#list1 li:lt(2)").css("border", "2px dotted aqua");
+
+            // 7. class="obj1"인 요소를 잡아주세요.
+            // id가 list3인 요소의 가장 마지막 위치에
+            // 추가해주세요.
+            // appendTo를 이용해 추가할 수 있습니다.
+            var obj1Copy = $(".obj1").clone(); // 그냥은 복사가 안 되기 때문에
+                                               // .clone()을 추가로 붙여야 함 (깊은 복사)
+            obj1Copy.appendTo("#list3");       // 왜냐하면 단순히 주소값만 받아오기 때문이다. (얕은 복사)
+
+            // 8. id="list3"인 요소의 하위 li중 인덱스번호 1번 요소의
+            // 클래스 속성에 무슨 값이 있는지 콘솔에 찍어주세요.
+            // id="list3"인 요소의 하위 li중 인덱스번호 1번 조회구문을
+            // 먼저 1:1로 보내주세요.
+            var eq1 = $("#list3 li:eq(0)").attr("class"); // obj1
+            console.log(eq1);
+
+            // 9. id="list3"인 요소의 하위 li중 2번째(1)인 요소의
+            // 클래스 속성값을 obj2로 바꿔주시고
+            // .attr("class", "바꿀값"); 을 이용해 값을 수정해줄 수 있습니다.
+            $("#list3 li:eq(1)").attr("class", "obj2"); // 속성이 없는 두번째 요소에 class="obj2" 속성을 집어넣는다.
+            // .obj2에 대해서 배경색을 노란색으로 바꿔주세요.
+            $(".obj2").css("background-color", "yellow");
+
+            // 10. id="list3"인 요소의 하위 li중 첫 번째(0)요소의
+            // 클래스 속성에 obj3를 추가합니다.
+            // .addClass()를 이용해주세요.
+            $("#list3 li:eq(0)").addClass("obj3"); // class속성을 바꾸는게 아닌 추가이다.
+            // 그 다음 .obj3를 선택해서 글씨색을 빨간색으로 바꿔주세요.
+            $(".obj3").css("color", "red");
         });
 
     </script>
