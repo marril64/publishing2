@@ -69,6 +69,48 @@
                 $("#btn4").parent().next().slideUp("slow");
             });
 
+            // #btn5를 누르면 다시 slideDown이 실행되게 해주세요.
+            $("#btn5").click(function() {
+                $("#btn5").parent().next().slideDown("slow");
+            });
+
+            // #btn6을 누르면 slideToggle이 실행되게 해주세요.
+            $("#btn6").click(function() {
+                $("#btn6").parent().next().slideToggle("fast");
+            });
+
+            // #btn7을 누르면 클릭한 요소의 부모의 다음 형제에 대해서
+            // fadeOut을 걸어주세요.
+            $("#btn7").click(function() {
+                $("#btn7").parent().next().fadeOut("slow");
+            });
+
+            // #btn8을 누르면 클릭한 요소의 부모의 다음 형제에 대해서
+            // fadeIn을 걸어주세요.
+            $("#btn8").click(function() {
+                $("#btn8").parent().next().fadeIn("slow");
+            });
+
+            // #btn9을 누르면 클릭한 요소의 부모의 다음 형제에 대해서
+            // fadeToggle을 걸어주세요.
+            $("#btn9").click(function() {
+                $("#btn9").parent().next().fadeToggle("slow");
+            });
+
+            // fadeTo(속도, 투명도);
+            // 속도는 fase, slow, normal 아니면 밀리초(1000분의 1초)
+            // 투명도 => 0.3(70% 투명), 1(0% 투명)
+            // #btn10에 대해서 0.3투명도를
+            $("#btn10").click(function() {
+                $("#box3").fadeTo("slow", "0.3");
+            });
+
+            // #btn11에 대해서 1 투명도를 줘서 작성해주세요.
+            $("#btn11").click(function() {
+                $("#box3").fadeTo("slow", "1");
+            });
+
+
         });
     </script>
     <meta charset="UTF-8">
