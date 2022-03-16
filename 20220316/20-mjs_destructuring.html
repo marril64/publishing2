@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 디스트럭처링 할당(비구조화 할당, 구조분해 할당)은 배열 내부의 자료를
+        // 하나하나 쪼개서 변수에 대입하는 것입니다.
+        // 배열로 된 자료를 빠르게 분해할때 유용합니다.
+        // ES5 문법
+        var arr = [1, 2, 3];
+        // 위 arr 내부 3개의 자료를 각각 변수에 담아주세요.
+        var one = arr[0];
+        var two = arr[1];
+        var three = arr[2];
+
+        console.log(one, two, three); // 1 2 3
+        console.log(...arr); // 1 2 3
+
+        // 위와 같이 하나하나 할당을 해줘야 분해할 수 있기 때문에
+        // ES6 이후부터는 다음과 같이 할당합니다.
+        const arr2 = [4, 5, 6];
+
+        // ES6 구조분해 할당(디스트럭처링 할당)
+        // 변수 four, five, six에 각각 4, 5, 6을 한 줄로 대입한다.
+        // 선언자료 [변수1, 변수2, 변수3...] = 대입용 배열이나 값;
+        const [four, five, six] = arr2;
+
+        console.log(four, five, six); // 4 5 6
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
